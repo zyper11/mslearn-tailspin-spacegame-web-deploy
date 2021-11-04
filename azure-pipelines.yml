@@ -132,7 +132,7 @@ stages:
                   inputs:
                     azureSubscription: "Resource Manager - Tailspin - Space Game"
                     deployToSlotOrASE: "true"
-                    resourceGroupName: "tailspin-space-game-rg"
+                    resourceGroupName: "tailspin-space-game-cadence-rg"
                     slotName: "swap"
                     appName: "$(WebAppNameStaging)"
                     package: "$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip"
@@ -140,7 +140,7 @@ stages:
                   displayName: "Swap deployment slots"
                   inputs:
                     azureSubscription: "Resource Manager - Tailspin - Space Game"
-                    resourceGroupName: "tailspin-space-game-rg"
+                    resourceGroupName: "tailspin-space-game-cadence-rg"
                     webAppName: "$(WebAppNameStaging)"
                     sourceSlot: "swap"
                     targetSlot: "production"
